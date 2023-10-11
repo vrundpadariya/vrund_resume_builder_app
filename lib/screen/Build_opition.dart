@@ -24,24 +24,24 @@ class _build_opitionState extends State<build_opition> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pop(context);
+                          Navigator.pushReplacementNamed(context, 'homepage');
                         },
                         child: Icon(
                           Icons.arrow_back_ios,
                           color: Globals.textcolor,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 50,
                       ),
                       Text(
@@ -87,26 +87,28 @@ class _build_opitionState extends State<build_opition> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Text(
                             e["name"],
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           const Spacer(),
                           IconButton(
                             onPressed: () {
                               Navigator.of(context).pushNamed(e["route_name"]);
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.navigate_next,
                               size: 30,
                             ),
                           ),
                         ],
                       ),
-                      Divider(),
+                      const Divider(),
                     ],
                   ),
                 ).toList(),

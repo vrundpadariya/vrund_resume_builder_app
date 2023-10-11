@@ -79,7 +79,7 @@ class _HomepageState extends State<Homepage> {
           Navigator.pushReplacementNamed(context, 'build');
         },
         backgroundColor: Globals.background,
-        child: Icon(
+        child: const Icon(
           Icons.add,
         ),
       ),
