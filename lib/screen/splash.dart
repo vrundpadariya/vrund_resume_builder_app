@@ -21,27 +21,15 @@ class _splash_pageState extends State<splash_page> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 200,
-              width: 200,
-              decoration: const BoxDecoration(
+              height: 300,
+              width: 300,
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    "lib/Assets/atbox-resume-factory.gif0",
-                  ),
-                  fit: BoxFit.cover,
+                  image: AssetImage("lib/Assets/atbox-resume-factory.gif"),
                 ),
               ),
             ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-              "Made in India ♥♥♥ ",
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.black,
-              ),
-            )
+            Text("I Love My India ❤️"),
           ],
         ),
       ),

@@ -25,6 +25,7 @@ class _Contact_pageState extends State<Contact_page> {
       body: Column(
         children: [
           Expanded(
+            flex: 1,
             child: Container(
               height: 60,
               alignment: Alignment.topCenter,
@@ -32,38 +33,72 @@ class _Contact_pageState extends State<Contact_page> {
               child: Row(
                 children: [
                   Expanded(
-                    flex: 5,
+                    flex: 1,
+                    child: GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          Globals.indexcontactvalue = 0;
+                        });
+                      },
+                      child: Column(
+                        children: [
+                          Expanded(
+                            flex: 13,
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "contact",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              color: (Globals.indexcontactvalue == 0)
+                                  ? Colors.yellow
+                                  : Globals.background,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
                     child: Column(
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: const Text(
-                            "contact",
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
+                        Expanded(
+                          flex: 13,
+                          child: GestureDetector(
+                            onTap: (){
+                              setState(() {
+                                Globals.indexcontactvalue = 1;
+                              });
+                              },
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "Photo",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
                           ),
                         ),
                         Expanded(
-                          flex: 1,
                           child: Container(
-                            color: Colors.yellow,
-                          ),
+                              color: (Globals.indexcontactvalue == 1)
+                                  ? Colors.yellow
+                                  : Globals.background,
                         ),
+                        ),
+
                       ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Photo",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
                     ),
                   ),
                 ],
@@ -73,7 +108,10 @@ class _Contact_pageState extends State<Contact_page> {
           Expanded(
             flex: 13,
             child: Container(
-              alignment: Alignment.center,
+              alignment: Alignment.topCenter,
+              padding: const EdgeInsets.only(
+                top: 20,
+              ),
               color: Colors.grey,
               child: Container(
                 color: Colors.white,
