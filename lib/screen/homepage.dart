@@ -24,6 +24,9 @@ class _HomepageState extends State<Homepage> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(
+                    height: 50,
+                  ),
                   Text(
                     "Resume Builder",
                     style: TextStyle(

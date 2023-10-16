@@ -14,7 +14,7 @@ class _personaldetailState extends State<personaldetail> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-
+        toolbarHeight: 120,
         backgroundColor: Globals.background,
         leading: const Icon(
           Icons.arrow_back_ios,
@@ -22,10 +22,17 @@ class _personaldetailState extends State<personaldetail> {
         title: const Text(
         "Personal Details",
           style: TextStyle(
-          fontSize: 15,
-          //  color: Globals.textcolor
+          fontSize: 25,
+            color: Colors.white,
           ),
         ),
+      ),
+      body: Column(
+        children: [
+          Container(
+
+          ),
+        ],
       ),
     );
   }
