@@ -4,6 +4,7 @@ import 'package:resume_app/screen/homepage.dart';
 import 'package:resume_app/screen/splash.dart';
 
 import 'Build_opition.dart';
+import 'Build_opition_page/personal_detail.dart';
 
 void main() {
   runApp(
@@ -15,6 +16,7 @@ void main() {
         'homepage': (context) => const Homepage(),
         'build': (context) => const build_opition(),
         'contact': (context) => const Contact_page(),
+        'personal_detail': (context) => const personaldetail(),
       },
     ),
   );

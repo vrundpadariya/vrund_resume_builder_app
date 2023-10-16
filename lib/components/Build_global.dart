@@ -12,7 +12,7 @@ List<Map<String, dynamic>> BuildCatogaries = [
   {
     "name": "Personal Detail",
     "icon": "lib/Assets/user.png",
-    "route_name": "personal detail",
+    "route_name": "personal_detail",
   },
   {
     "name": "Education",

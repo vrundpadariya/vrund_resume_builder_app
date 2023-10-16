@@ -17,11 +17,12 @@ class _HomepageState extends State<Homepage> {
           Expanded(
             flex: 2,
             child: Container(
+             alignment: Alignment.bottomCenter,
               height: 150,
               width: 500,
               color: Globals.background,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Resume Builder",
@@ -31,7 +32,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 50,
                   ),
                   Text(
                     "RESUMES",

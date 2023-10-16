@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:resume_app/components/global.dart';
-
 import '../components/Build_global.dart';
 
 class build_opition extends StatefulWidget {

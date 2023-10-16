@@ -16,7 +16,8 @@ class _Contact_pageState extends State<Contact_page> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Globals.background,
+
         title: const Text(
           "Resume Builder",
           style: TextStyle(color: Colors.white),
@@ -27,9 +28,9 @@ class _Contact_pageState extends State<Contact_page> {
           Expanded(
             flex: 1,
             child: Container(
-              height: 60,
+              height: 60  ,
               alignment: Alignment.topCenter,
-              color: Colors.blue,
+                color: Globals.background,
               child: Row(
                 children: [
                   Expanded(
@@ -44,13 +45,15 @@ class _Contact_pageState extends State<Contact_page> {
                         children: [
                           Expanded(
                             flex: 13,
-                            child: Container(
-                              alignment: Alignment.center,
-                              child: const Text(
-                                "contact",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
+                            child: GestureDetector(
+                              child: Container(
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  "contact",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),

@@ -23,13 +23,13 @@ class _splash_pageState extends State<splash_page> {
             Container(
               height: 300,
               width: 300,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("lib/Assets/atbox-resume-factory.gif"),
                 ),
               ),
             ),
-            Text("I Love My India ❤️"),
+            const Text("I Love My India ❤️"),
           ],
         ),
       ),
