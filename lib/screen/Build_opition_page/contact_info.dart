@@ -17,7 +17,15 @@ class _Contact_pageState extends State<Contact_page> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Globals.background,
-
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, 'build');
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Globals.textcolor,
+          ),
+        ),
         title: const Text(
           "Resume Builder",
           style: TextStyle(color: Colors.white),
@@ -28,15 +36,15 @@ class _Contact_pageState extends State<Contact_page> {
           Expanded(
             flex: 1,
             child: Container(
-              height: 60  ,
+              height: 60,
               alignment: Alignment.topCenter,
-                color: Globals.background,
+              color: Globals.background,
               child: Row(
                 children: [
                   Expanded(
                     flex: 1,
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         setState(() {
                           Globals.indexcontactvalue = 0;
                         });
@@ -76,11 +84,11 @@ class _Contact_pageState extends State<Contact_page> {
                         Expanded(
                           flex: 13,
                           child: GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               setState(() {
                                 Globals.indexcontactvalue = 1;
                               });
-                              },
+                            },
                             child: Container(
                               alignment: Alignment.center,
                               child: const Text(
@@ -95,12 +103,11 @@ class _Contact_pageState extends State<Contact_page> {
                         ),
                         Expanded(
                           child: Container(
-                              color: (Globals.indexcontactvalue == 1)
-                                  ? Colors.yellow
-                                  : Globals.background,
+                            color: (Globals.indexcontactvalue == 1)
+                                ? Colors.yellow
+                                : Globals.background,
+                          ),
                         ),
-                        ),
-
                       ],
                     ),
                   ),

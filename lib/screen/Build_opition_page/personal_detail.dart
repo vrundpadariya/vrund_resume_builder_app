@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:resume_app/components/global.dart';
 
@@ -21,13 +20,19 @@ class _personaldetailState extends State<personaldetail> {
         centerTitle: true,
         toolbarHeight: 100,
         backgroundColor: Globals.background,
-        leading: const Icon(
-          Icons.arrow_back_ios,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, 'build');
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Globals.textcolor,
+          ),
         ),
         title: const Text(
-        "Personal Details",
+          "Personal Details",
           style: TextStyle(
-          fontSize: 25,
+            fontSize: 25,
             color: Colors.white,
           ),
         ),
@@ -41,37 +46,36 @@ class _personaldetailState extends State<personaldetail> {
           height: 550,
           width: 350,
           color: Colors.white,
-          child:  SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 const Row(
-                   children: [
-                      Text(
+                const Row(
+                  children: [
+                    Text(
                       "DOB",
-                     style: TextStyle(
-                       fontSize: 18,
-                      color: Colors.blue,
-                       fontWeight: FontWeight.bold,
-                     ),
-                     ),
-                   ],
-                 ),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
                 TextFormField(
                   keyboardType: TextInputType.datetime,
-
                   decoration: const InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                      )),
-                  hintText: "DD/MM/YYYY",
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 17,
-                    fontWeight: FontWeight.normal,
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Colors.grey,
+                    )),
+                    hintText: "DD/MM/YYYY",
+                    hintStyle: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 17,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
-                ),
                 ),
                 Text(
                   "Marital Status",
@@ -104,7 +108,7 @@ class _personaldetailState extends State<personaldetail> {
                 Row(
                   children: [
                     Radio(
-                      autofocus: true,
+                        autofocus: true,
                         activeColor: Globals.background,
                         value: "Married",
                         groupValue: marrid,
@@ -113,7 +117,7 @@ class _personaldetailState extends State<personaldetail> {
                             marrid = val;
                           });
                         }),
-                   const  Text(
+                    const Text(
                       "Married",
                       style: TextStyle(
                         fontSize: 18,
@@ -124,10 +128,7 @@ class _personaldetailState extends State<personaldetail> {
                 ),
                 Text(
                   "Languages Known",
-                  style: TextStyle(
-                    fontSize: 23,
-                    color: Globals.background
-                  ),
+                  style: TextStyle(fontSize: 23, color: Globals.background),
                 ),
                 Row(
                   children: [
@@ -139,7 +140,7 @@ class _personaldetailState extends State<personaldetail> {
                             Globals.english = val!;
                           });
                         }),
-                   const  Text(
+                    const Text(
                       "English",
                       style: TextStyle(
                         fontSize: 20,
@@ -158,7 +159,7 @@ class _personaldetailState extends State<personaldetail> {
                             Globals.hindi = val!;
                           });
                         }),
-                   const  Text(
+                    const Text(
                       "Hindi",
                       style: TextStyle(
                         fontSize: 20,
@@ -177,7 +178,7 @@ class _personaldetailState extends State<personaldetail> {
                             Globals.gujarati = val!;
                           });
                         }),
-                   const  Text(
+                    const Text(
                       "Gujarati",
                       style: TextStyle(
                         fontSize: 20,
@@ -186,10 +187,10 @@ class _personaldetailState extends State<personaldetail> {
                     )
                   ],
                 ),
-                 Text(
+                Text(
                   "Nationality",
                   style: TextStyle(
-                      fontSize: 23,
+                    fontSize: 23,
                     color: Globals.background,
                   ),
                 ),
@@ -197,8 +198,8 @@ class _personaldetailState extends State<personaldetail> {
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Colors.grey,
-                        )),
+                      color: Colors.grey,
+                    )),
                     hintText: "Indian",
                     hintStyle: TextStyle(
                       color: Colors.grey,
@@ -206,8 +207,7 @@ class _personaldetailState extends State<personaldetail> {
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-
-                )
+                ),
               ],
             ),
           ),
